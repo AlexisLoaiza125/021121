@@ -1,0 +1,22 @@
+var notas = [1,2,3,2,4,4,2,3];
+        var promedio = 0;
+        var notaMasAlta = -1;
+
+        //ciclos dentro de ciclos
+        for(var posicionTemporal = 0; posicionTemporal < notas.length; posicionTemporal++) {
+            //for externo
+            console.log("for externo: " + notas[posicionTemporal]);
+            if(notas[posicionTemporal] > notaMasAlta){
+                notaMasAlta = notas[posicionTemporal] ;
+            }
+            /for(var posicionComparador = posicionTemporal + 1; posicionComparador < notas.length; posicionComparador++) {
+                //for interno
+                console.log("for interno:   " + notas[posicionComparador], notaMasAlta);
+                if(notas[posicionComparador] > notaMasAlta) {
+                    notaMasAlta = notas[posicionComparador];
+                }
+            }/
+            promedio = promedio + notas[posicionTemporal];
+        }
+        console.log("promedio: " + eval(promedio/notas.length));
+        console.log("nota mas alta: " + notaMasAlta);
